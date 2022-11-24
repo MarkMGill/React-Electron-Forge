@@ -1,9 +1,11 @@
 {
-  "name": "cra-electron-forge-demo",
+  "name": "cra-forge",
   "version": "0.1.0",
   "main": "public/electron.js",
   "homepage": "./",
   "private": true,
+  "description": "FlipSetter Desktop Application",
+  "author": "FlipSetter",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -41,10 +43,10 @@
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.52",
-    "@electron-forge/maker-deb": "^6.0.0-beta.52",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.52",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.52",
-    "@electron-forge/maker-zip": "^6.0.0-beta.52",
+    "@electron-forge/maker-deb": "^6.0.3",
+    "@electron-forge/maker-rpm": "^6.0.3",
+    "@electron-forge/maker-squirrel": "^6.0.3",
+    "@electron-forge/maker-zip": "^6.0.3",
     "concurrently": "^5.2.0",
     "electron": "^9.1.1",
     "electron-devtools-installer": "^3.1.1",
@@ -53,6 +55,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
+        "asar": true,
         "icon": "src/icons/mac/icon.icns",
         "name": "React + Electron App"
       },
@@ -60,7 +63,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "cra_electron_forge_demo"
+            "name": "cra_forge"
           }
         },
         {
