@@ -1,0 +1,160 @@
+.mheaderContainer {
+  height: 60px;
+  width: 100%;
+  background-color: #303030 !important;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.mheaderSmallContainer {
+  height: 60px;
+  width: 100%;
+  background-color: #303030 !important;
+  display: block;
+  position: sticky;
+  top: 0;
+  padding: 0 20px;
+  z-index: 999;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.m-logo { 
+  margin: 0 5px;
+}
+
+.logo-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-Subtitle {
+  font-size: 14px;
+  color: #0C8081;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerCenter {
+  flex: 3;
+}
+
+.m-icon { 
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.searchbar {
+  width: 100%;
+  height: 45px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+
+.searchInput {
+  border: none;
+  width: 50%;
+  font-size: 20px;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.headerLinks {
+  display: flex;
+}
+
+.headerLink {
+  margin: 0 10px;
+  font-size: 15px;
+  display: flex;
+  color: hsla(0,0%,100%,.6);
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerLink:hover {
+  color: #fff;
+}
+
+.headerIcons {
+  display: flex;
+  font-size: 30px !important;
+  padding-left: 50px;
+}
+
+.headerIconItem {
+  margin-right: 25px;
+  color: hsla(0,0%,100%,.6);
+  cursor: pointer;
+  position: relative;
+}
+
+.headerIconItem:hover {
+  color: #fff;
+}
+
+.headerIconBadge {
+  width: 22px;
+  height: 18px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -7px;
+  right: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.headerImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 10px;
+}
+
+.dropdown-admin, .dropdown-profile {
+  background-color: transparent !important;
+  border: transparent !important;
+}

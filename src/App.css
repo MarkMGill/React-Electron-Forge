@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap");
+/* above line added from whiteboard css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*.home, */
+.services,
+.products,
+.search {
   display: flex;
-  flex-direction: column;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.whiteboard {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signup {
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
+
+.login {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+
+/* below lines added from whiteboard css */
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  font-family: Poppins, sans-serif;
+}
+
+.text-editor {
+  border-radius: 5px;
+  border: 2px solid grey;
+  height: 100%;
+  width: 100%;
+}
+
+.menu-bar {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-bar button {
+  font-size: 17px;
+  border-radius: 3px;
+  margin: .5px;
+  margin-right: 5px;
+  outline: none;
+  border: none;
+  background-color: none;
+  color: #0C8081;
+  cursor: pointer;
+}
+
+button.is-active {
+  background: #999292;
+  padding: 2px 3px;
+  border-radius: 2px;
+} 
+
+.ProseMirror > p {
+  width: 100%;
+}
+
+.ProseMirror {
+  padding: 5px;
+  border-top: 1px solid darkgrey;
+  height: 100%;
+  overflow: auto;
+}
+
+.ProseMirror > * + * {
+    margin-top: 0.75em;
+}
+
+.ProseMirrorul ul,
+.ProseMirror ol {
+    padding: 0 1rem;
+  }
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+    line-height: 1.1;
+  }
+
+.ProseMirror code {
+    background-color: #dcdcdc;
+    color: #dcdcdc;
+  }
+
+.ProseMirror pre {
+    background: #dcdcdc;
+    color: #000000;
+    font-family: 'JetBrainsMono', monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.ProseMirror pre code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.8rem;
+    }
+
+.ProseMirror img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.ProseMirror blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid #dcdcdc;
+  }
+
+.ProseMirror hr {
+    border: none;
+    border-top: 2px solid #dcdcdc;
+    margin: 2rem 0;
+  }
+
+.handle {
+  position: absolute;
+  cursor: pointer;
+  right: 2px;
+  top: 2px;
+  z-index: 100000;
+}
+
+.eyeShow {
+  position: absolute;
+  cursor: pointer;
+  right: 2px;
+  top: 23px;
+  z-index: 100000;
+}
+
+.eyeHide {
+  position: absolute;
+  cursor: pointer;
+  right: 2px;
+  top: 23px;
+  z-index: 100000;
+}
+
+.closeTextArea{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.react-resizable {
+  position: relative;
+}
+.react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pg08IS0tIEdlbmVyYXRvcjogQWRvYmUgRmlyZXdvcmtzIENTNiwgRXhwb3J0IFNWRyBFeHRlbnNpb24gYnkgQWFyb24gQmVhbGwgKGh0dHA6Ly9maXJld29ya3MuYWJlYWxsLmNvbSkgLiBWZXJzaW9uOiAwLjYuMSAgLS0+DTwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DTxzdmcgaWQ9IlVudGl0bGVkLVBhZ2UlMjAxIiB2aWV3Qm94PSIwIDAgNiA2IiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojZmZmZmZmMDAiIHZlcnNpb249IjEuMSINCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiDQl4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjZweCIgaGVpZ2h0PSI2cHgiDT4NCTxnIG9wYWNpdHk9IjAuMzAyIj4NCQk8cGF0aCBkPSJNIDYgNiBMIDAgNiBMIDAgNC4yIEwgNCA0LjIgTCA0LjIgNC4yIEwgNC4yIDAgTCA2IDAgTCA2IDYgTCA2IDYgWiIgZmlsbD0iIzAwMDAwMCIvPg0JPC9nPg08L3N2Zz4=');
+  background-position: bottom right;
+  padding: 0 3px 3px 0;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  cursor: se-resize;
+}
+
+.text-editor >div {
+  height: 100%;
+}
+
+.text-editor-with-head >div>div:last-child {
+  height: calc(100% - 10px) !important;
+}
+
+.text-editor >div>div:last-child {
+  height: calc(100% - 70px);
+}
+
+.center-whiteboard-item {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+}
+
+.center-whiteboard-icon {
+  position: absolute !important;
+  top: 200px;
+  left: -50%;
+}
+
+.center-whiteboard-tiptap {
+  position: absolute !important;
+  top: 25%;
+  left: 30%;
+}
+

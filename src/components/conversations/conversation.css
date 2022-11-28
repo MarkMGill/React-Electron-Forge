@@ -1,0 +1,51 @@
+.conversation {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.conversation:hover {
+    background-color: rgb(166, 166, 166);
+}
+
+.conversationImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.conversationName {
+    font-weight: 500;
+}
+
+.conversationContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.topContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.messageContent {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.messageName {
+    font-weight: bold;
+}
+
+.messageTime {
+    font-size: 14px;
+}

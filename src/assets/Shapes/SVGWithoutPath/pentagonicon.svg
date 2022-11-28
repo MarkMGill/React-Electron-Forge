@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  <mask id="path-1-inside-1" fill="white">
+    <polygon points="5,15 19,5, 32,15 27,31 10,31" />
+  </mask>
+  <polygon points="5,15 19,5 32,15 27,31 10,31" stroke="#000000" stroke-width="2" mask="url(#path-1-inside-1)" />
+</svg>
