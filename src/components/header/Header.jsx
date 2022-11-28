@@ -24,7 +24,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Alert from "react-popup-alert";
 
 
-export default function Header() {
+export default function Header({handleOpen}) {
   const { user } = useContext(AuthContext);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   
@@ -100,34 +100,24 @@ export default function Header() {
           </div>
         </Tooltip>
         </div>
-
-
         <div>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50}}>             
-              <Dropdown as={ButtonGroup}>
-                <Dropdown.Toggle split variant="secondary" className="dropdown-admin" id="dropdown-admin">
-                  <div onClick={() => onShowAlert('message')}> Admin</div>
-                  <Alert  
-                            text={alert.text}
-                            btnText={'Close'} 
-                    />
-                  </Dropdown.Toggle>
-                <Dropdown.Menu variant="dark">
-                  <Dropdown.Item href="https://flipsetter.com/mission/horizon/dashboard" style={{ textDecoration: "none" }}><FaSun />Horizon</Dropdown.Item>
-                  <Dropdown.Item href="https://flipsetter.com/mission/control" style={{ textDecoration: "none" }}><FaPeriscope/>Telescope</Dropdown.Item>
-                  <Dropdown.Item href="https://flipsetter.com/mission/janus" style={{ textDecoration: "none" }}><FaVideo />Janus</Dropdown.Item>
-                  <Dropdown.Item href="https://flipsetter.com/mission/logs" style={{ textDecoration: "none" }}><FaBug />Error Logs</Dropdown.Item>
-                  <Dropdown.Item href="https://flipsetter.com/mission/admin" style={{ textDecoration: "none" }}><FaUserShield />Site Dashboard</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-              </div>
-              </div>
-               
-        
-
-
+            <div onClick={() => handleOpen()} style={{ display: 'flex', justifyContent: 'center', marginTop: 50}}>             
+            <Dropdown as={ButtonGroup}>
+              <Dropdown.Toggle split variant="secondary" className="dropdown-admin" id="dropdown-admin">
+                <div> Admin</div>
+                </Dropdown.Toggle>
+              <Dropdown.Menu variant="dark">
+                <Dropdown.Item href="https://flipsetter.com/mission/horizon/dashboard" style={{ textDecoration: "none" }}><FaSun />Horizon</Dropdown.Item>
+                <Dropdown.Item href="https://flipsetter.com/mission/control" style={{ textDecoration: "none" }}><FaPeriscope/>Telescope</Dropdown.Item>
+                <Dropdown.Item href="https://flipsetter.com/mission/janus" style={{ textDecoration: "none" }}><FaVideo />Janus</Dropdown.Item>
+                <Dropdown.Item href="https://flipsetter.com/mission/logs" style={{ textDecoration: "none" }}><FaBug />Error Logs</Dropdown.Item>
+                <Dropdown.Item href="https://flipsetter.com/mission/admin" style={{ textDecoration: "none" }}><FaUserShield />Site Dashboard</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            </div>
+          </div>
           <div>
-              <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50}}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: 50}}>
               <button onClick={() => onShowAlert('message')}><img className="profile-img" src="/avatar.png" alt="" /></button>
               <Alert  
                       text={alert.text}
@@ -136,9 +126,7 @@ export default function Header() {
                       onClosePress={onCloseAlert}
               />
               </div>
-              </div>
-               
-
+            </div>
         <Dropdown as={ButtonGroup}>
           <Dropdown.Toggle split variant="secondary" className="dropdown-profile" id="dropdown-profile">
             <img className="profile-img" src="/avatar.png" alt="" />
